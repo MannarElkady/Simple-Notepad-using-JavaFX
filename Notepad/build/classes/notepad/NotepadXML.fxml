@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notepad.NotepadXMLController">
+   <children>
+      <MenuBar layoutX="14.0" layoutY="14.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="588.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu fx:id="fileItem" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newItem" mnemonicParsing="false" onAction="#newItemAction" text="New">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="openItem" mnemonicParsing="false" onAction="#openItemAction" text="Open">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="saveItem" mnemonicParsing="false" onAction="#saveItenAction" text="Save">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="exitItem" mnemonicParsing="false" onAction="#exitItemAction" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="editItem" mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="cutItem" mnemonicParsing="false" onAction="#cutItemAction" text="Cut" />
+                  <MenuItem fx:id="copyItem" mnemonicParsing="false" onAction="#copyItemAction" text="Copy" />
+                  <MenuItem fx:id="pasteItem" mnemonicParsing="false" onAction="#pasteItemAction" text="Paste" />
+                  <MenuItem fx:id="deleteItem" mnemonicParsing="false" onAction="#deleteItemAction" text="Delete" />
+                  <MenuItem fx:id="selectAllItem" mnemonicParsing="false" onAction="#selectAllItemAction" text="Select All" />
+            </items>
+          </Menu>
+            <Menu fx:id="helpItem" mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem fx:id="aboutItem" mnemonicParsing="false" onAction="#aboutItemAction" text="About" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="textArea" layoutX="76.0" layoutY="89.0" prefHeight="200.0" prefWidth="200.0" promptText="Write Something..." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
